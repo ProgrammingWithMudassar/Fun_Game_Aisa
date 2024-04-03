@@ -1,0 +1,83 @@
+.login-page {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../Assets/jpg/backgroundLoginPage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  position: relative;
+}
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: var(--elegantRed-color);
+  border: 1px solid var(--yellow-color);
+  padding: 8px 8px 5px 8px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+.home-page {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../Assets/png/Bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 100px;
+  position: relative;
+}
+.menu-btn {
+  padding: 7px 10px;
+  background-color: var(--red-color);
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+.open-menu-btn {
+  padding: 7px 10px;
+  background-color: var(--red-color);
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 350px;
+}
+.menu-bar-link {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.logout {
+  background-color: var(--elegantRed-color);
+  border: 1px solid var(--yellow-color);
+  padding: 8px 8px 5px 8px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+.menuBar {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background: black;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.3);
+}
+.gradient-background {
+    background-image: linear-gradient(to left, rgba(30, 30, 30, 0.9) 5%, rgb(0, 0, 0) 10%);
+}
+.btn-bakground {
+    width: 100%;
+    background-image: linear-gradient(to bottom, #FF0000 40%, #A60404 90%);
+}

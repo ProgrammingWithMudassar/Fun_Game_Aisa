@@ -1,0 +1,38 @@
+.input{
+    width: 100%;
+    padding: 16px 10px;
+    border-radius: 5px;
+    font-size: 18px ;
+}
+.btn{
+    padding: 10px 17px;
+    border-radius: 5px;
+    font-size: 22px ;
+    color: #000;
+    background-image: linear-gradient(to bottom, #883410, #e4d068); 
+    width: 100%;
+    cursor: pointer;
+    transition: background-image 1s ease-in-out; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.btn:hover {
+    background-image: linear-gradient(to bottom, #883410 10%, #e4d068 90%); 
+}
+
+.send-otp{
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-size: 18px ;
+    color: #000;
+    background-image: linear-gradient(to bottom, #883410, #e4d068); 
+    cursor: pointer;
+    transition: background-image 0.3s ease; 
+}
+
+.send-otp:hover {
+    background-image: linear-gradient(to bottom, #883410 10%, #e4d068 90%); 
+}

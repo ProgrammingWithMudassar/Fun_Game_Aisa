@@ -1,15 +1,22 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Home, Login } from './pages/index.js'
+import RoutesProtection from './utils/RoutesProtection.jsx'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <p className='text-[50px] font-bold bg-red-500'>this is tailwind integration</p>
-    </>
+    <div className='App'>
+      <Router>
+        <Routes>
+          <Route path="/" element={<RoutesProtection />}>
+            <Route path="" element={<Home />} />
+          </Route>
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </Router>
+    </div>
   )
 }
 
