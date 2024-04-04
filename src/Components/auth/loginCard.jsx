@@ -32,7 +32,7 @@ const LoginCard = () => {
     <Box>
       <Box
         sx={{
-          backgroundColor: "#000", height: "calc(100vh - 300px)", width: "400px",
+          backgroundColor: "#000", height: "400px", width: "400px",
           border: "2px solid #fff", borderRadius: "10px", px: 2
         }}>
         <Typography variant="h4" color="#fff" sx={{ width: '100%', textAlign: 'center', py: 4 }}>Login Now</Typography>
@@ -66,8 +66,8 @@ const LoginCard = () => {
           <Typography id="logout-modal-title" sx={{ color: '#fff', fontSize: '24px', fontWeight: 600 }}>Are you sure you want to log Out?</Typography>
           {/* actions  */}
           <Box sx={{ width:"100%",display: 'flex', justifyContent: 'space-between', mt: 2, gap:2 }}>
-            <Button onClick={handleCloseLogoutModal} variant="contained" className='btn-bakground' sx={{ fontSize:'24px', borderRadius:'10px', border:'2px solid #fff', p:0.6 }}>Yes</Button>
-            <Button onClick={handleLogout}  variant="contained" className='btn-bakground ' sx={{ fontSize:'24px', borderRadius:'10px', border:'2px solid #fff', p:0.6 }}>No</Button>
+            <Button onClick={handleClose} variant="contained" className='btn-bakground' sx={{ fontSize:'24px', borderRadius:'10px', border:'2px solid #fff', p:0.6 }}>Yes</Button>
+            <Button onClick={handleClose}  variant="contained" className='btn-bakground ' sx={{ fontSize:'24px', borderRadius:'10px', border:'2px solid #fff', p:0.6 }}>No</Button>
           </Box>
 
         </Box>

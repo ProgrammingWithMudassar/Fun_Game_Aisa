@@ -3,7 +3,7 @@ import { Navigate, Outlet } from 'react-router-dom';
 const PrivateRoutes = () => {
     const verifyUser = () => {
         // const token = Cookies.get('authToken');
-        const token = true;
+        const token = false;
         return !!token;
     };
 

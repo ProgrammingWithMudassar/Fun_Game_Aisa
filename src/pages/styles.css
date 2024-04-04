@@ -81,3 +81,13 @@
     width: 100%;
     background-image: linear-gradient(to bottom, #FF0000 40%, #A60404 90%);
 }
+.Chip{
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+.Chips{
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
