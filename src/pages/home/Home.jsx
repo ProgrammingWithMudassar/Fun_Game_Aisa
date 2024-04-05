@@ -23,6 +23,7 @@ import wheelGif from '../../Assets/Final-Wheel.gif';
 import wheelCenter from '../../Assets/wheel_center_part.png';
 import loadingGameGif from '../../Assets/loadingLogo.png';
 import $ from 'jquery'
+import { Link } from 'react-router-dom'
 import '../styles.css'
 
 const generateDataArray = (length) => {
@@ -213,7 +214,9 @@ const Home = () => {
           <img src={FunLogo} alt="Login" style={{ width: '80%', objectFit: 'contain' }} />
         </Grid>
         <Grid item xs={3} sx={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
-          <button className='close'><RxCross2 size={25} /></button>
+          <Link to="/login">
+            <button className='close'><RxCross2 size={25} /></button>
+          </Link>
         </Grid>
       </Grid>
 
