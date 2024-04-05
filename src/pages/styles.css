@@ -11,9 +11,9 @@
   position: relative;
 }
 .close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  /* position: absolute; */
+  /* top: 20px; */
+  /* right: 20px; */
   background-color: var(--elegantRed-color);
   border: 1px solid var(--yellow-color);
   padding: 8px 8px 5px 8px;
@@ -29,7 +29,6 @@
   background-image: url("../Assets/png/Bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 0 100px;
   position: relative;
 }
 .menu-btn {
@@ -75,19 +74,347 @@
   box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.3);
 }
 .gradient-background {
-    background-image: linear-gradient(to left, rgba(30, 30, 30, 0.9) 5%, rgb(0, 0, 0) 10%);
+  background-image: linear-gradient(
+    to left,
+    rgba(30, 30, 30, 0.9) 5%,
+    rgb(0, 0, 0) 10%
+  );
 }
 .btn-bakground {
-    width: 100%;
-    background-image: linear-gradient(to bottom, #FF0000 40%, #A60404 90%);
+  width: 100%;
+  background-image: linear-gradient(to bottom, #ff0000 40%, #a60404 90%);
 }
-.Chip{
+.Chip {
   width: 80px;
   height: 80px;
   object-fit: contain;
+  cursor: pointer;
 }
-.Chips{
+.Chip:hover {
+  scale: 1.05;
+}
+.Chips {
   width: 100px;
   height: 100px;
   object-fit: contain;
+}
+
+/* sppiner */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.spinWheelInner {
+  position: relative;
+}
+.wheelContainer {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  /* overflow:hidden; */
+  position: relative;
+  height: max-content;
+  width: 100%;
+  padding-top: 30px;
+  flex-direction: column;
+  justify-content: center;
+}
+.wheelContainer::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 112%;
+  height: 124%;
+  top: -7%;
+  left: -7%;
+  background-image: url("./images/rightbgbgbg.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+.container {
+  width: 350px;
+  height: 350px;
+  background-color: #ccc;
+  border-radius: 50%;
+  border: 15px solid #dde;
+  position: relative;
+  overflow: hidden;
+  transition: 5s;
+  position: relative;
+  margin: auto;
+}
+
+.container div {
+  height: 50%;
+  width: 120px;
+  position: absolute;
+  clip-path: polygon(100% 0, 50% 100%, 0 0);
+  transform: translateX(-50%);
+  transform-origin: bottom;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 37px;
+  font-weight: 500;
+  font-family: sans-serif;
+  color: #fff;
+  left: 100px;
+  padding: 10px 0 100px;
+}
+
+.container div::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2px; /* Offset by the border size */
+  bottom: -2px; /* Offset by the border size */
+  left: -2px; /* Offset by the border size */
+  right: -2px; /* Offset by the border size */
+  border: 2px solid #000;
+  clip-path: polygon(100% 0, 50% 100%, 0 0);
+  transform: translateX(-50%) rotate(var(--rotation));
+  transform-origin: bottom;
+  z-index: -1; /* Put the border behind the content */
+}
+.wheelContainerOuter {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 11%;
+}
+.wheelLeftContent {
+  width: 42%;
+}
+
+.container .zero {
+  background-color: var(--green-color);
+  left: 50%;
+}
+.container .one {
+  background-color: var(--green-color);
+  transform: rotate(36deg);
+}
+.container .two {
+  background-color: var(--green-color);
+  transform: rotate(72deg);
+}
+.container .three {
+  background-color: var(--green-color);
+  transform: rotate(108deg);
+}
+.container .four {
+  background-color: var(--green-color);
+  transform: rotate(144deg);
+}
+.container .five {
+  background-color: var(--green-color);
+  transform: rotate(180deg);
+}
+.container .six {
+  background-color: var(--green-color);
+  transform: rotate(216deg);
+}
+.container .seven {
+  background-color: var(--green-color);
+  transform: rotate(252deg);
+}
+.container .eight {
+  background-color: var(--green-color);
+  transform: rotate(288deg);
+}
+.container .nine {
+  background-color: var(--green-color);
+  transform: rotate(324deg);
+}
+
+#spin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: #e2e2e2;
+  text-transform: uppercase;
+  border: 8px solid #fff;
+  font-weight: bold;
+  font-size: 20px;
+  color: #a2a2a2;
+  width: 80px;
+  height: 80px;
+  font-family: sans-serif;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  letter-spacing: 1px;
+}
+
+.headerInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  gap: 20px;
+}
+.headerMid {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 68%;
+  justify-content: space-between;
+}
+.headerLeft {
+  min-width: max-content;
+}
+.headerLogoName {
+  width: 85%;
+}
+.headerLogoName a {
+  display: block;
+  width: 100%;
+}
+/* .headerRight{
+  align-self: flex-start;
+  margin-top: 10px;
+} */
+
+.headerLogo {
+  width: 10%;
+  min-width: 80px;
+}
+
+.headerLogo > a {
+  display: block;
+  width: 100%;
+}
+.headerLogo > a img {
+  display: block;
+}
+.closeGame > a {
+  display: block;
+  width: 70px;
+}
+.closeGame > a img {
+  display: block;
+}
+.wheelPage {
+  transition: all 0.3s ease-in;
+  background-image: url("./images/bgbgbg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.wheelPageInner {
+  padding: 0 20px;
+}
+.userId p {
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #fff;
+  padding: 16px 35px;
+  background-image: url("./images/id_bg.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.wheelImages {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 460px;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 10;
+}
+.wheelOuterImage {
+  position: absolute;
+  top: -6px;
+  width: 415px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.wheelCenterImage {
+  width: 120px;
+  left: 0;
+  right: 0;
+  top: 20px;
+  bottom: 0;
+  position: absolute;
+  margin: auto;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wheelCenterImage img {
+  display: block;
+  max-height: 100%;
+}
+.wheelRightContent {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
+
+@media only screen and (max-width: 992px) {
+  .userId p {
+    font-size: 16px;
+  }
+  .closeGame > a {
+    display: block;
+    width: 60px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .recentList {
+    gap: 15px 30px;
+  }
+  .recentList li {
+    padding: 10px 25px;
+  }
+  .container {
+    width: 250px;
+    height: 250px;
+  }
+  .container div {
+    height: 50%;
+    width: 80px;
+    left: 70px;
+    font-size: 16px;
+  }
+  .wheelOuterImage {
+    top: 62px;
+    width: 295px;
+    left: 0px;
+  }
+  .wheelCenterImage {
+    width: 85px;
+    left: -1px;
+    top: -80px;
+  }
 }
